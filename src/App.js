@@ -31,6 +31,7 @@ function App() {
         <Route path="/blog" component={Blog} />
         <Route path="/magazines/:issue" component={Issue} />
         <Route path="/not-found" component={NotFound} />
+        <Route component={NotFound} />
         {/* 
         <Route path="/legal/privacy" component={Privacy} />
         <Route path="/legal/terms" component={Terms} />*/}
