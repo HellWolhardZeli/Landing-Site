@@ -1,0 +1,68 @@
+/* Footer */
+.footer-social li {
+  display: inline-block;
+}
+
+/* breadcrumb */
+.welcome-bg-shape .welcome-first-shape {
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+.welcome-bg-shape .welcome-second-shape {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Yumpu */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Nav Button */
+.nav-button {
+  padding: 8px 30px !important;
+  border-radius: 20px;
+  color: #fff !important;
+  background: #d852e8;
+  border: 1px solid #d852e8;
+}
+.nav-button:hover {
+  color: #450b78 !important;
+  background: transparent;
+  border: 1px solid #450b78;
+}
+
+/* Magazine */
+.magazine-gif img {
+  max-width: 50%;
+}
+.features-caption a {
+  color: #635c5c;
+}
+
+
+/* Fixes */
+.available-app-area{
+  background-image: linear-gradient(0deg, #6c19f6 0%, #f9218d 100%);
+}
+.best-pricing::before{
+  background-image: linear-gradient(0deg, #f9218d 0%, #6c19f6 100%);
+}
