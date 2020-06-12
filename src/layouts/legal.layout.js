@@ -9,7 +9,7 @@ import Markdown from "markdown-to-jsx";
 export default class Legal extends Component {
   state = {
     index: LegalList.findIndex(
-      (article) => article.slug == this.props.match.params.slug
+      (article) => article.slug === this.props.match.params.slug
     ),
   };
 

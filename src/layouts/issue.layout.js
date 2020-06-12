@@ -9,7 +9,7 @@ import IssueList from "../static/db/magazines.js";
 export default class Issue extends Component {
   state = {
     index: IssueList.findIndex(
-      (magazine) => magazine.slug == this.props.match.params.issue
+      (magazine) => magazine.slug === this.props.match.params.issue
     ),
   };
 
