@@ -11,8 +11,7 @@ import Events from "./layouts/events.layout";
 import About from "./layouts/about.layout";
 import Collaborate from "./layouts/collaborate.layout";
 import Blog from "./layouts/blog.layout";
-// import Privacy from "./layouts/privacy.layout";
-// import Terms from "./layouts/terms.layout";
+import Legal from "./layouts/legal.layout";
 import BlogDetails from "./layouts/blog-details.layout";
 import Issue from "./layouts/issue.layout";
 import NotFound from "./layouts/not-found.layout";
@@ -30,11 +29,9 @@ function App() {
         <Route path="/blog/:slug" component={BlogDetails} />
         <Route path="/blog" component={Blog} />
         <Route path="/magazines/:issue" component={Issue} />
+        <Route path="/legal/:slug" component={Legal} />
         <Route path="/not-found" component={NotFound} />
         <Route component={NotFound} />
-        {/* 
-        <Route path="/legal/privacy" component={Privacy} />
-        <Route path="/legal/terms" component={Terms} />*/}
       </Switch>
       <MessengerCustomerChat
         pageId="2180653485508485"
