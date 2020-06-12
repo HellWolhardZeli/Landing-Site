@@ -5,11 +5,12 @@ import { Helmet } from "react-helmet";
 import Breadcrumb from "../components/breadcrumb.component";
 import Sidebar from "../components/sidebar.component";
 import BlogList from "../static/db/blogs.js";
+import Markdown from "markdown-to-jsx";
 
 export default class BlogDetails extends Component {
   state = {
     index: BlogList.findIndex(
-      (article) => article.slug == this.props.match.params.slug
+      (article) => article.slug === this.props.match.params.slug
     ),
   };
 
@@ -64,6 +65,7 @@ export default class BlogDetails extends Component {
                             src={this.state.blog.embed}
                             frameborder="0"
                             allowfullscreen="true"
+                            title="Magazine"
                             allowtransparency="true"
                           ></iframe>
                         </div>
@@ -86,7 +88,18 @@ export default class BlogDetails extends Component {
                             ))}
                           </li>
                         </ul>
-                        <>{this.state.blog.description}</>
+                        {this.state.blog.description && (
+                          <Markdown
+                            options={{
+                              overrides: {
+                                ul: { props: { className: "unordered-list" } },
+                              },
+                              forceBlock: true,
+                            }}
+                          >
+                            {this.state.blog.description}
+                          </Markdown>
+                        )}
                       </div>
                     </div>
                     <div class="navigation-top">
