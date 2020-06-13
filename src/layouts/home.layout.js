@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Magazine from "../components/magazine.component";
 import Screenshot from "../components/screenshot.component";
+import EventList from "../components/eventList.component";
 
 export default class Home extends Component {
   render() {
@@ -21,59 +22,6 @@ export default class Home extends Component {
                         Spark joy
                         <br />
                         with Dopamine
-                      </h1>
-                      <p data-animation="fadeInUp" data-delay=".8s">
-                        We have some positivity initiatives that might interest
-                        you.
-                      </p>
-                      {/* <!-- Slider btn --> */}
-                      <div class="slider-btns">
-                        {/* <!-- Hero-btn --> */}
-                        <a
-                          data-animation="fadeInLeft"
-                          data-delay="1.0s"
-                          href="/"
-                          class="btn radius-btn"
-                        >
-                          Coming Soon!
-                        </a>
-                        {/* <!-- Video Btn --> */}
-                        <a
-                          data-animation="fadeInRight"
-                          data-delay="1.0s"
-                          class="popup-video video-btn ani-btn"
-                          href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
-                        >
-                          <i class="fas fa-play"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div
-                      class="hero__img d-none d-lg-block f-right"
-                      data-animation="fadeInRight"
-                      data-delay="1s"
-                    >
-                      <img
-                        src={require("../static/img/hero/hero_right.png")}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
-              <div class="container">
-                <div class="row d-flex align-items-center">
-                  <div class="col-lg-6 col-md-9 ">
-                    <div class="hero__caption">
-                      <span data-animation="fadeInUp" data-delay=".4s">
-                        Let Positivity Engulf You
-                      </span>
-                      <h1 data-animation="fadeInUp" data-delay=".6s">
-                        Get things done with Dopamine
                       </h1>
                       <p data-animation="fadeInUp" data-delay=".8s">
                         We have some positivity initiatives that might interest
@@ -314,89 +262,7 @@ export default class Home extends Component {
           </div>
         </section>
         {/* <!-- Best Pricing End --> */}
-        {/* <!-- Pricing Card Start --> */}
-        <div class="pricing-card-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="single-card text-center mb-30">
-                  <div class="card-top">
-                    <span>25 April - 03 May</span>
-                    <h4>
-                      Pastels
-                      <span>Being positive through my days in quarantine</span>
-                    </h4>
-                  </div>
-                  <div class="card-bottom">
-                    <ul>
-                      <li>HUES OF THE MIND</li>
-                    </ul>
-                    <a
-                      href="https://www.instagram.com/p/B_XTNKKHQIZ/"
-                      class="btn card-btn1"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="single-card  text-center mb-30">
-                  <div class="card-top">
-                    <span>03 April - 10 April</span>
-                    <h4>
-                      Spade <span> Online Contest </span>
-                    </h4>
-                  </div>
-                  <div class="card-bottom">
-                    <ul>
-                      <li>LOVELY PROFESSIONAL UNIVERSITY</li>
-                      <li>Lovely Professional University, Phagwara, Punjab</li>
-                    </ul>
-                    <a
-                      href="#"
-                      class="btn card-btn1"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="single-card text-center mb-30">
-                  <div class="card-top">
-                    <span>12 October</span>
-                    <h4>
-                      ASF <span>Awaaz Studio Festival</span>
-                    </h4>
-                  </div>
-                  <div class="card-bottom">
-                    <ul>
-                      <li>AWAAZ STUDIOS</li>
-                      <li>
-                        Triangular Lawns, Birla Auditorium, Jaipur, Rajasthan
-                        302001
-                      </li>
-                    </ul>
-                    <a
-                      href="https://www.townscript.com/e/awaaz-studio-festival-412132"
-                      class="btn card-btn1"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- Pricing Card End --> */}
+        <EventList limit={3} />
         <Magazine />
         {/* <!-- Available App  Start--> */}
         <div class="available-app-area">
