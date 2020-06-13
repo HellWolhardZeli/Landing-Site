@@ -55,6 +55,7 @@ export default class Issue extends Component {
                           <iframe
                             src={this.state.magazine.display.embed}
                             frameborder="0"
+                            title={this.state.magazine.title}
                             allowfullscreen="true"
                             allowtransparency="true"
                           ></iframe>
