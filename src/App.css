@@ -58,11 +58,19 @@
   color: #635c5c;
 }
 
-
 /* Fixes */
-.available-app-area{
-  background-image: linear-gradient(0deg, #6c19f6 0%, #f9218d 100%);
+/* All Devices */
+.available-app-area {
+  background-image: -webkit-linear-gradient(0deg, #6c19f6 0%, #f9218d 100%);
 }
-.best-pricing::before{
-  background-image: linear-gradient(0deg, #f9218d 0%, #6c19f6 100%);
+/* Our Recent Events */
+.best-pricing.pricing-padding {
+  background-image: url("./static/img/gallery/best_pricingbg.jpg");
+}
+.best-pricing::before {
+  background-image: -webkit-linear-gradient(0deg, #f9218d 0%, #6c19f6 100%);
+}
+/* Features */
+.best-features-area .single-features .features-icon span {
+  background-image: -webkit-linear-gradient(90deg, #e78ae9 0%, #926ef8 100%);
 }
