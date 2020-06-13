@@ -34,8 +34,8 @@ function App() {
         <Route component={NotFound} />
       </Switch>
       <MessengerCustomerChat
-        pageId="2180653485508485"
-        appId="474688876705786"
+        pageId={process.env.REACT_APP_FACEBOOK_pageId}
+        appId={process.env.REACT_APP_FACEBOOK_pageId}
       />
       <Footer />
     </Router>
