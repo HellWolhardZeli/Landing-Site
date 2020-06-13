@@ -28,7 +28,7 @@ export default class Breadcrumb extends Component {
                           <a href="/premium">Premium</a>
                         </li>
                         <li>
-                          <a>Magazines</a>
+                          <a href="/#magazines">Magazines</a>
                           <ul class="submenu">
                             <li>
                               <a href="/magazines/issue-5">Issue 5</a>

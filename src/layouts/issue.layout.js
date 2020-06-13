@@ -1,38 +1,26 @@
 import React, { Component } from "react";
 import SubFooter from "../components/sub-footer.component";
-import { Redirect } from "react-router-dom";
 import Magazine from "../components/magazine.component";
 import { Helmet } from "react-helmet";
 import Breadcrumb from "../components/breadcrumb.component";
 import firebase from "../config/database";
-import IssueList from "../static/db/magazines.js";
 
 export default class Issue extends Component {
-  state = {
-    index: IssueList.findIndex(
-      (magazine) => magazine.slug === this.props.match.params.issue
-    ),
-  };
+  state = { magazine: undefined };
 
   componentDidMount() {
-    this.setState({ magazine: IssueList[this.state.index] });
+    var firestore = firebase.firestore();
+    firestore
+      .collection("magazines")
+      .where("slug", "==", this.props.match.params.slug)
+      .get()
+      .then((querySnapshot) => {
+        const data = querySnapshot.docs[0].data();
+        this.setState({ magazine: data });
+      });
   }
 
-  saveIssue = () => {
-    IssueList.forEach((issue, i) => {
-      var firestore = firebase.firestore();
-      firestore
-        .collection("magazines")
-        .add(issue)
-        .then(() => {
-          console.log("added", i);
-        })
-        .catch((err) => console.log(err));
-    });
-  };
-
   render() {
-    if (this.state.index === -1) return <Redirect to="/not-found" />;
     return (
       <>
         {this.state.magazine && (
@@ -57,12 +45,34 @@ export default class Issue extends Component {
                 <div class="row d-flex justify-content-center">
                   <div class="col-lg-9 text-center">
                     <div class="feature-img">
-                      <img
-                        class="img-fluid"
-                        src={require("../static/img/blog/single_blog_1.png")}
-                        alt=""
-                      />
-                      {/* <!-- <div class='embed-container' data-page-width='453' data-page-height='640' id='ypembedcontainer' ><iframe   src="https://www.yumpu.com/en/embed/view/Qp31WCOlLst45rPo" frameborder="0" allowfullscreen="true"  allowtransparency="true"></iframe></div> --> */}
+                      {this.state.magazine.display.embed ? (
+                        <div
+                          class="embed-container"
+                          data-page-width="453"
+                          data-page-height="640"
+                          id="ypembedcontainer"
+                        >
+                          <iframe
+                            src={this.state.magazine.display.embed}
+                            frameborder="0"
+                            allowfullscreen="true"
+                            allowtransparency="true"
+                          ></iframe>
+                        </div>
+                      ) : (
+                        <a
+                          href={this.state.magazine.display.link}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="magazine-gif"
+                        >
+                          <img
+                            class="img-fluid"
+                            src={require(`../static/img/${this.state.magazine.display.teaser}`)}
+                            alt=""
+                          />
+                        </a>
+                      )}
                     </div>
                     <div class="section-tittle">
                       <h3>
@@ -136,16 +146,18 @@ export default class Issue extends Component {
                       <div class="features-caption">
                         <h3>Writers</h3>
                         <p>
-                          {this.state.magazine.writers.map((writer, i) => (
-                            <a
-                              href={writer.profile}
-                              rel="noreferrer noopener"
-                              target="_blank"
-                              key={i}
-                            >
-                              <span>{writer.name} |</span>
-                            </a>
-                          ))}
+                          {this.state.magazine.contributors.writers.map(
+                            (writer, i) => (
+                              <a
+                                href={writer.profile}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                key={i}
+                              >
+                                <span>{writer.name} | </span>
+                              </a>
+                            )
+                          )}
                         </p>
                       </div>
                     </div>
@@ -164,16 +176,18 @@ export default class Issue extends Component {
                       <div class="features-caption">
                         <h3>Designers</h3>
                         <p>
-                          {this.state.magazine.designers.map((designer, i) => (
-                            <a
-                              href={designer.profile}
-                              rel="noreferrer noopener"
-                              target="_blank"
-                              key={i}
-                            >
-                              <span>{designer.name} |</span>
-                            </a>
-                          ))}
+                          {this.state.magazine.contributors.designers.map(
+                            (designer, i) => (
+                              <a
+                                href={designer.profile}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                key={i}
+                              >
+                                <span>{designer.name} |</span>
+                              </a>
+                            )
+                          )}
                         </p>
                       </div>
                     </div>
@@ -192,7 +206,7 @@ export default class Issue extends Component {
                       <div class="features-caption">
                         <h3>Photography</h3>
                         <p>
-                          {this.state.magazine.photographers.map(
+                          {this.state.magazine.contributors.photographers.map(
                             (photographer, i) => (
                               <a
                                 href={photographer.profile}
@@ -222,16 +236,18 @@ export default class Issue extends Component {
                       <div class="features-caption">
                         <h3>Artists and Illustrators</h3>
                         <p>
-                          {this.state.magazine.artists.map((artist, i) => (
-                            <a
-                              href={artist.profile}
-                              rel="noreferrer noopener"
-                              target="_blank"
-                              key={i}
-                            >
-                              <span>{artist.name} |</span>
-                            </a>
-                          ))}
+                          {this.state.magazine.contributors.artists.map(
+                            (artist, i) => (
+                              <a
+                                href={artist.profile}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                key={i}
+                              >
+                                <span>{artist.name} |</span>
+                              </a>
+                            )
+                          )}
                         </p>
                       </div>
                     </div>
@@ -250,16 +266,18 @@ export default class Issue extends Component {
                       <div class="features-caption">
                         <h3>Reviewers</h3>
                         <p>
-                          {this.state.magazine.reviewers.map((reviewer, i) => (
-                            <a
-                              href={reviewer.profile}
-                              rel="noreferrer noopener"
-                              target="_blank"
-                              key={i}
-                            >
-                              <span>{reviewer.name} |</span>
-                            </a>
-                          ))}
+                          {this.state.magazine.contributors.reviewers.map(
+                            (reviewer, i) => (
+                              <a
+                                href={reviewer.profile}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                key={i}
+                              >
+                                <span>{reviewer.name} |</span>
+                              </a>
+                            )
+                          )}
                         </p>
                       </div>
                     </div>
@@ -278,16 +296,18 @@ export default class Issue extends Component {
                       <div class="features-caption">
                         <h3>Editors</h3>
                         <p>
-                          {this.state.magazine.editors.map((editor, i) => (
-                            <a
-                              href={editor.profile}
-                              rel="noreferrer noopener"
-                              target="_blank"
-                              key={i}
-                            >
-                              <span>{editor.name} |</span>
-                            </a>
-                          ))}
+                          {this.state.magazine.contributors.editors.map(
+                            (editor, i) => (
+                              <a
+                                href={editor.profile}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                key={i}
+                              >
+                                <span>{editor.name} |</span>
+                              </a>
+                            )
+                          )}
                         </p>
                       </div>
                     </div>

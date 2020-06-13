@@ -28,7 +28,7 @@ function App() {
         <Route path="/collaborate" component={Collaborate} />
         <Route path="/blog/:slug" component={BlogDetails} />
         <Route path="/blog" component={Blog} />
-        <Route path="/magazines/:issue" component={Issue} />
+        <Route path="/magazines/:slug" component={Issue} />
         <Route path="/legal/:slug" component={Legal} />
         <Route path="/not-found" component={NotFound} />
         <Route component={NotFound} />
