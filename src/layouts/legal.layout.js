@@ -3,22 +3,25 @@ import { Redirect } from "react-router-dom";
 import SubFooter from "../components/sub-footer.component";
 import Breadcrumb from "../components/breadcrumb.component";
 import Sidebar from "../components/sidebar.component";
-import LegalList from "../static/db/legals.js";
 import Markdown from "markdown-to-jsx";
+import firebase from "../config/database";
 
 export default class Legal extends Component {
-  state = {
-    index: LegalList.findIndex(
-      (article) => article.slug === this.props.match.params.slug
-    ),
-  };
+  state = { legal: undefined };
 
   componentDidMount() {
-    this.setState({ legal: LegalList[this.state.index] });
+    var firestore = firebase.firestore();
+    firestore
+      .collection("legals")
+      .where("slug", "==", this.props.match.params.slug)
+      .get()
+      .then((querySnapshot) => {
+        const data = querySnapshot.docs[0].data();
+        this.setState({ legal: data });
+      });
   }
 
   render() {
-    if (this.state.index === -1) return <Redirect to="/not-found" />;
     return (
       <>
         {this.state.legal && (

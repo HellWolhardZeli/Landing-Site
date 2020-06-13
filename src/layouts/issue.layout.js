@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 import Magazine from "../components/magazine.component";
 import { Helmet } from "react-helmet";
 import Breadcrumb from "../components/breadcrumb.component";
+import firebase from "../config/database";
 import IssueList from "../static/db/magazines.js";
 
 export default class Issue extends Component {
@@ -16,6 +17,19 @@ export default class Issue extends Component {
   componentDidMount() {
     this.setState({ magazine: IssueList[this.state.index] });
   }
+
+  saveIssue = () => {
+    IssueList.forEach((issue, i) => {
+      var firestore = firebase.firestore();
+      firestore
+        .collection("magazines")
+        .add(issue)
+        .then(() => {
+          console.log("added", i);
+        })
+        .catch((err) => console.log(err));
+    });
+  };
 
   render() {
     if (this.state.index === -1) return <Redirect to="/not-found" />;

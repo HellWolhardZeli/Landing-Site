@@ -4,22 +4,25 @@ import SubFooter from "../components/sub-footer.component";
 import { Helmet } from "react-helmet";
 import Breadcrumb from "../components/breadcrumb.component";
 import Sidebar from "../components/sidebar.component";
-import BlogList from "../static/db/blogs.js";
 import Markdown from "markdown-to-jsx";
+import firebase from "../config/database";
 
 export default class BlogDetails extends Component {
-  state = {
-    index: BlogList.findIndex(
-      (article) => article.slug === this.props.match.params.slug
-    ),
-  };
+  state = { blog: undefined };
 
   componentDidMount() {
-    this.setState({ blog: BlogList[this.state.index] });
+    var firestore = firebase.firestore();
+    firestore
+      .collection("blog")
+      .where("slug", "==", this.props.match.params.slug)
+      .get()
+      .then((querySnapshot) => {
+        const data = querySnapshot.docs[0].data();
+        this.setState({ blog: data });
+      });
   }
 
   render() {
-    if (this.state.index === -1) return <Redirect to="/not-found" />;
     return (
       <>
         {this.state.blog && (

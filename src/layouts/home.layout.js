@@ -299,12 +299,9 @@ export default class Home extends Component {
           </div>
         </section>
         {/* <!-- Services Area End --> */}
-        <Screenshot/>
+        <Screenshot />
         {/* <!-- Best Pricing Start --> */}
-        <section
-          class="best-pricing pricing-padding"
-          data-background={require("../static/img/gallery/best_pricingbg.jpg")}
-        >
+        <section class="best-pricing pricing-padding">
           <div class="container">
             {/* <!-- Section Tittle --> */}
             <div class="row d-flex justify-content-center">
