@@ -18,9 +18,38 @@ export default class BlogDetails extends Component {
       .get()
       .then((querySnapshot) => {
         const data = querySnapshot.docs[0].data();
+        data.id = querySnapshot.docs[0].id;
         this.setState({ blog: data });
       });
   }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onComment = (e) => {
+    this.setState({ notif: "Loading..." });
+    e.preventDefault();
+    var firestore = firebase.firestore();
+    firestore
+      .collection("blog")
+      .doc(this.state.blog.id)
+      .update({
+        comments: firebase.firestore.FieldValue.arrayUnion({
+          name: this.state.name,
+          phone: this.state.phone,
+          email: this.state.email,
+          text: this.state.text,
+          date: new Date().toGMTString(),
+        }),
+      })
+      .then((result) => {
+        if (typeof result == "string") {
+          this.setState({ notif: result });
+        } else window.location.reload();
+      })
+      .catch(() => this.setState({ notif: "Some error occured!" }));
+  };
 
   render() {
     return (
@@ -228,7 +257,7 @@ export default class BlogDetails extends Component {
                       </div>
                     </div>
                     <div class="comments-area">
-                      <h4>05 Comments</h4>
+                      <h4>{this.state.blog.comments.length} Comments</h4>
                       {this.state.blog.comments.map((comment, i) => (
                         <div class="comment-list">
                           <div class="single-comment justify-content-between d-flex">
@@ -265,9 +294,12 @@ export default class BlogDetails extends Component {
                     </div>
                     <div class="comment-form">
                       <h4>Leave a Reply</h4>
+                      <div class="genric-btn success circle mb-3">
+                        {this.state.notif}
+                      </div>
                       <form
                         class="form-contact comment_form"
-                        action="#"
+                        onSubmit={this.onComment}
                         id="commentForm"
                       >
                         <div class="row">
@@ -275,11 +307,12 @@ export default class BlogDetails extends Component {
                             <div class="form-group">
                               <textarea
                                 class="form-control w-100"
-                                name="comment"
-                                id="comment"
+                                name="text"
+                                id="text"
                                 cols="30"
                                 rows="9"
-                                placeholder="Write Comment"
+                                onChange={this.handleChange}
+                                placeholder="Write Your Comment"
                               ></textarea>
                             </div>
                           </div>
@@ -290,6 +323,7 @@ export default class BlogDetails extends Component {
                                 name="name"
                                 id="name"
                                 type="text"
+                                onChange={this.handleChange}
                                 placeholder="Name"
                               />
                             </div>
@@ -301,6 +335,7 @@ export default class BlogDetails extends Component {
                                 name="email"
                                 id="email"
                                 type="email"
+                                onChange={this.handleChange}
                                 placeholder="Email"
                               />
                             </div>
@@ -312,6 +347,7 @@ export default class BlogDetails extends Component {
                                 name="phone"
                                 id="phone"
                                 type="number"
+                                onChange={this.handleChange}
                                 placeholder="Phone Number"
                               />
                             </div>
