@@ -151,47 +151,6 @@ export default class Collaborate extends Component {
                         </p>
                       </div>
                     </div>
-
-                    <div class="single-customer mb-100">
-                      <div class="what-img">
-                        <img
-                          src={require("../static/img/shape/man3.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div class="what-cap">
-                        <h4>
-                          <a href="#">
-                            Welcome To The Best Model Winner Contest
-                          </a>
-                        </h4>
-                        <p>
-                          Utenim ad minim veniam quisnostrud exercitation
-                          ullamcolabor nisiut aliquip ex ea commodo consequat
-                          duis aute irure dolor in represse.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="single-customer mb-100">
-                      <div class="what-img">
-                        <img
-                          src={require("../static/img/shape/man2.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div class="what-cap">
-                        <h4>
-                          <a href="#">
-                            Welcome To The Best Model Winner Contest
-                          </a>
-                        </h4>
-                        <p>
-                          Utenim ad minim veniam quisnostrud exercitation
-                          ullamcolabor nisiut aliquip ex ea commodo consequat
-                          duis aute irure dolor in represse.
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

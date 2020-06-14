@@ -185,7 +185,7 @@ export default class Issue extends Component {
                                 target="_blank"
                                 key={i}
                               >
-                                <span>{designer.name} |</span>
+                                <span>{designer.name} | </span>
                               </a>
                             )
                           )}
@@ -215,7 +215,7 @@ export default class Issue extends Component {
                                 target="_blank"
                                 key={i}
                               >
-                                <span>{photographer.name} |</span>
+                                <span>{photographer.name} | </span>
                               </a>
                             )
                           )}
@@ -245,7 +245,7 @@ export default class Issue extends Component {
                                 target="_blank"
                                 key={i}
                               >
-                                <span>{artist.name} |</span>
+                                <span>{artist.name} | </span>
                               </a>
                             )
                           )}
@@ -275,7 +275,7 @@ export default class Issue extends Component {
                                 target="_blank"
                                 key={i}
                               >
-                                <span>{reviewer.name} |</span>
+                                <span>{reviewer.name} | </span>
                               </a>
                             )
                           )}
@@ -305,7 +305,7 @@ export default class Issue extends Component {
                                 target="_blank"
                                 key={i}
                               >
-                                <span>{editor.name} |</span>
+                                <span>{editor.name} | </span>
                               </a>
                             )
                           )}
