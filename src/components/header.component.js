@@ -25,10 +25,12 @@ export default class Breadcrumb extends Component {
                     <nav>
                       <ul id="navigation">
                         <li>
-                          <a href="/premium">Premium</a>
+                          <a href="/">Home</a>
                         </li>
                         <li>
-                          <a href="/#magazines">Magazines</a>
+                          <a href="/#magazines">
+                            Magazines <i className="fa fa-angle-down"></i>
+                          </a>
                           <ul class="submenu">
                             <li>
                               <a href="/magazines/issue-5">Issue 5</a>
@@ -58,6 +60,14 @@ export default class Breadcrumb extends Component {
                         </li>
                         <li>
                           <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                          <button
+                            class="genric-btn success circle mb-3"
+                            id="contribute"
+                          >
+                            Contribute
+                          </button>
                         </li>
                       </ul>
                     </nav>
