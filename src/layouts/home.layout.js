@@ -33,7 +33,7 @@ export default class Home extends Component {
                         <a
                           data-animation="fadeInLeft"
                           data-delay="1.0s"
-                          href="/"
+                          href="https://app.dopamineplanet.com"
                           class="btn radius-btn"
                         >
                           Coming Soon!
@@ -43,7 +43,7 @@ export default class Home extends Component {
                           data-animation="fadeInRight"
                           data-delay="1.0s"
                           class="popup-video video-btn ani-btn"
-                          href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
+                          href="https://www.instagram.com/p/BwOxXaAD0KC/"
                         >
                           <i class="fas fa-play"></i>
                         </a>
