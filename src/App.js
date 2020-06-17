@@ -12,7 +12,7 @@ import About from "./layouts/about.layout";
 import Collaborate from "./layouts/collaborate.layout";
 import Blog from "./layouts/blog.layout";
 import Legal from "./layouts/legal.layout";
-import BlogDetails from "./layouts/blog-details.layout";
+import BlogDetails from "./layouts/article.layout";
 import Issue from "./layouts/issue.layout";
 import NotFound from "./layouts/not-found.layout";
 
