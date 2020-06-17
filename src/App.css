@@ -58,6 +58,11 @@
   color: #635c5c;
 }
 
+/* Blogs */
+.media.post_item img {
+  width: 30%;
+}
+
 /* Fixes */
 /* All Devices */
 .available-app-area {
