@@ -168,7 +168,9 @@ export default class About extends Component {
                             </div> --> */}
                   <div class="service-cap">
                     <h4>
-                      <a href="#">Harshita Nagpal</a>
+                      <a href="https://www.instagram.com/hahaharshita">
+                        Harshita Nagpal
+                      </a>
                     </h4>
                     <h5>Co-founder</h5>
                     <p>
@@ -194,7 +196,9 @@ export default class About extends Component {
                   </div>
                   <div class="service-cap">
                     <h4>
-                      <a href="#">Mashu Ajmera</a>
+                      <a href="https://www.instagram.com/mashuajmera">
+                        Mashu Ajmera
+                      </a>
                     </h4>
                     <h5>Co-founder</h5>
 
@@ -220,7 +224,9 @@ export default class About extends Component {
                   </div>
                   <div class="service-cap">
                     <h4>
-                      <a href="#">Srinidhi Srinivasan</a>
+                      <a href="https://www.instagram.com/srini_1234/">
+                        Srinidhi Srinivasan
+                      </a>
                     </h4>
                     <h5>Content Creator</h5>
 
@@ -246,7 +252,9 @@ export default class About extends Component {
                   </div>
                   <div class="service-cap">
                     <h4>
-                      <a href="#">Samyak Samantaray</a>
+                      <a href="https://www.instagram.com/samyak.samantaray/">
+                        Samyak Samantaray
+                      </a>
                     </h4>
                     <h5>Design</h5>
                     <p>
@@ -272,7 +280,9 @@ export default class About extends Component {
                   </div>
                   <div class="service-cap">
                     <h4>
-                      <a href="#">Devika Gujrani</a>
+                      <a href="https://www.instagram.com/devika_gujrani97/">
+                        Devika Gujrani
+                      </a>
                     </h4>
                     <h5>Public Relations</h5>
                     <p>

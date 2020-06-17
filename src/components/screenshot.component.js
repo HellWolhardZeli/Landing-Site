@@ -15,9 +15,9 @@ export default class Screenshot extends Component {
                 </h3>
                 <p>
                   Lorem ipsum dolor sit amet, consecadipiscing elit, sed do
-                  eiusmod tempor incididunt ut ore et dolore magna aliqua.
-                  Quis ipsum suspendisse gravida. Risus commodo viverra
-                  maecenasan lacus vel facilisis.{" "}
+                  eiusmod tempor incididunt ut ore et dolore magna aliqua. Quis
+                  ipsum suspendisse gravida. Risus commodo viverra maecenasan
+                  lacus vel facilisis.{" "}
                 </p>
               </div>
             </div>
@@ -25,34 +25,19 @@ export default class Screenshot extends Component {
             <div class="col-xl-8 col-lg-8 col-md-col-md-7">
               <div class="app-active owl-carousel">
                 <div class="single-cases-img">
-                  <img
-                    src={require("../static/img/gallery/App1.png")}
-                    alt=""
-                  />
+                  <img src={require("../static/img/gallery/App1.png")} alt="" />
                 </div>
                 <div class="single-cases-img">
-                  <img
-                    src={require("../static/img/gallery/App2.png")}
-                    alt=""
-                  />
+                  <img src={require("../static/img/gallery/App2.png")} alt="" />
                 </div>
                 <div class="single-cases-img">
-                  <img
-                    src={require("../static/img/gallery/App3.png")}
-                    alt=""
-                  />
+                  <img src={require("../static/img/gallery/App3.png")} alt="" />
                 </div>
                 <div class="single-cases-img">
-                  <img
-                    src={require("../static/img/gallery/App2.png")}
-                    alt=""
-                  />
+                  <img src={require("../static/img/gallery/App4.png")} alt="" />
                 </div>
                 <div class="single-cases-img">
-                  <img
-                    src={require("../static/img/gallery/App1.png")}
-                    alt=""
-                  />
+                  <img src={require("../static/img/gallery/App1.png")} alt="" />
                 </div>
               </div>
             </div>

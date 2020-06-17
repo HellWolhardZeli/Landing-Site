@@ -94,7 +94,7 @@ export default class Issue extends Component {
                       <a
                         data-animation="fadeInLeft"
                         data-delay="1.0s"
-                        href="#"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScLK4Hhe9YK_nJw0wbIUEmoavJvn2SqUOwSOKQh-gRGCozcFw/viewform"
                         class="btn radius-btn"
                       >
                         GIVE FEEDBACK
@@ -103,7 +103,7 @@ export default class Issue extends Component {
                       <a
                         data-animation="fadeInLeft"
                         data-delay="1.0s"
-                        href="#"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScaVzYFnT8nVicqn8HZCr0Iw0y6SrMQHrMz4xx4o1loNFGVew/viewform"
                         class="btn radius-btn card-btn1"
                       >
                         Get Featured

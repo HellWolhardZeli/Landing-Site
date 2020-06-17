@@ -17,7 +17,7 @@ export default class Collaborate extends Component {
           />
         </Helmet>
         {/* <!-- Services Area Start --> */}
-        <section class="service-area services-padding">
+        <section class="service-area services-padding sky-blue">
           <Breadcrumb />
           <div class="container">
             {/* <!-- Section Tittle --> */}
@@ -112,7 +112,9 @@ export default class Collaborate extends Component {
                       </div>
                       <div class="what-cap">
                         <h4>
-                          <a href="#">Ajay Singh Peelwa</a>
+                          <a href="https://www.facebook.com/Ajay-Singh-Peelwa-Artworks-1396297390643408/">
+                            Ajay Singh Peelwa
+                          </a>
                         </h4>
                         <p>
                           I had a chance to get featured in Dopamine, the
@@ -137,7 +139,9 @@ export default class Collaborate extends Component {
                       </div>
                       <div class="what-cap">
                         <h4>
-                          <a href="#">Payal Lulla</a>
+                          <a href="https://www.instagram.com/payal_lulla_arts/">
+                            Payal Lulla
+                          </a>
                         </h4>
                         <p>
                           Art has a way to reach deep inside our souls and

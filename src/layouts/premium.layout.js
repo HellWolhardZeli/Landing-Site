@@ -141,7 +141,7 @@ export default class Premium extends Component {
 
                             </ul> --> */}
                     <a
-                      href="https://www.instagram.com/p/B_XTNKKHQIZ/"
+                      href="https://p-y.tm/mv-1XlW"
                       class="btn card-btn1"
                       target="_blank"
                       rel="noreferrer noopener"
@@ -167,7 +167,7 @@ export default class Premium extends Component {
                                 <li>Features</li>    
                             </ul> --> */}
                     <a
-                      href="#"
+                      href="https://www.paypal.com/paypalme2/dopamineplanet"
                       class="btn card-btn1"
                       target="_blank"
                       rel="noreferrer noopener"
@@ -193,7 +193,7 @@ export default class Premium extends Component {
                                 <li>Features</li>
                             </ul> --> */}
                     <a
-                      href="https://www.townscript.com/e/awaaz-studio-festival-412132"
+                      href="https://www.paypal.com/paypalme2/dopamineplanet"
                       class="btn card-btn1"
                       target="_blank"
                       rel="noreferrer noopener"

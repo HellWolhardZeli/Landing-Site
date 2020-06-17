@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import SubFooter from "../components/sub-footer.component";
 import { Helmet } from "react-helmet";
 import Breadcrumb from "../components/breadcrumb.component";
@@ -113,7 +112,7 @@ export default class BlogDetails extends Component {
                           </li>
                           <li>
                             {this.state.blog.tags.map((tag, i) => (
-                              <a href="#" key={i}>
+                              <a href={`/blog?tag=${tag}`} key={i}>
                                 <i class="fa fa-tag"></i>
                                 {tag + " "}
                               </a>
@@ -138,9 +137,9 @@ export default class BlogDetails extends Component {
                       <div class="d-sm-flex justify-content-between text-center">
                         <p class="like-info">
                           <span class="align-middle">
-                            <i class="fa fa-heart"></i>
+                            <i class="fa fa-bookmark"></i>
                           </span>{" "}
-                          Lily and 4 people like this
+                          {this.state.blog.category}
                         </p>
                         <div class="col-sm-4 text-center my-2 my-sm-0">
                           {/* <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> --> */}
@@ -148,7 +147,7 @@ export default class BlogDetails extends Component {
                         <ul class="social-icons">
                           <li>
                             <a
-                              href="https://api.whatsapp.com/send?phone=&text=Dopamine Positivity Magazine Issue 3 - https://dopamineplanet.com/blog/self-love/"
+                              href={`https://api.whatsapp.com/send?phone=&text=${this.state.blog.title} - https://dopamineplanet.com/blog/${this.state.blog.slug}`}
                               target="_blank"
                               rel="noreferrer noopener"
                             >
@@ -157,7 +156,7 @@ export default class BlogDetails extends Component {
                           </li>
                           <li>
                             <a
-                              href="https://www.facebook.com/sharer/sharer.php?u=https://dopamineplanet.com/blog/self-love/"
+                              href={`https://www.facebook.com/sharer/sharer.php?u=https://dopamineplanet.com/blog/${this.state.blog.slug}`}
                               target="_blank"
                               rel="noreferrer noopener"
                             >
@@ -166,7 +165,7 @@ export default class BlogDetails extends Component {
                           </li>
                           <li>
                             <a
-                              href="https://www.linkedin.com/shareArticle?mini=true&url=https://dopamineplanet.com/blog/self-love/&title=Self Love: The Key to a Happy Life&summary=Love yourself first and everything else falls into line! Go read these words of wisdom and more in this article by Srinidhi.&source=https://dopamineplanet.com"
+                              href={`https://www.linkedin.com/shareArticle?mini=true&url=https://dopamineplanet.com/blog/${this.state.blog.slug}&title=${this.state.blog.title}&summary=${this.state.blog.excerpt}&source=https://dopamineplanet.com`}
                               target="_blank"
                               rel="noreferrer noopener"
                             >
@@ -175,7 +174,7 @@ export default class BlogDetails extends Component {
                           </li>
                           <li>
                             <a
-                              href="whatsapp://send?text=Dopamine Positivity Magazine Issue 3 - https://dopamineplanet.com/blog/self-love/"
+                              href={`https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdopamineplanet.com%2Fblog%2F${this.state.blog.slug}%2F&text=${this.state.blog.title}&tw_p=tweetbutton&url=https%3A%2F%2Fdopamineplanet.com%2Fblog%2F${this.state.blog.slug}%2F&via=dopamineplanet`}
                               target="_blank"
                               rel="noreferrer noopener"
                             >
@@ -184,11 +183,11 @@ export default class BlogDetails extends Component {
                           </li>
                           <li>
                             <a
-                              href="mailto:?subject=Self%20Love%3A%20The%20Key%20to%20a%20Happy%20Life&body=Love%20yourself%20first%20and%20everything%20else%20falls%20into%20line!%20Go%20read%20these%20words%20of%20wisdom%20and%20more%20in%20this%20article%20by%20Srinidhi.%20https%3A//dopamineplanet.com/blog/self-love/"
+                              href={`mailto:?subject=${this.state.blog.slug} | Dopamine Planet&body=${this.state.blog.excerpt}%20https%3A//dopamineplanet.com/blog/${this.state.blog.slug}`}
                               target="_blank"
                               rel="noreferrer noopener"
                             >
-                              <i class="fab fa-envelope"></i>
+                              <i class="fa fa-envelope"></i>
                             </a>
                           </li>
                         </ul>
@@ -197,7 +196,7 @@ export default class BlogDetails extends Component {
                         <div class="row">
                           <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                             <div class="thumb">
-                              <a href="#">
+                              <a href="/blog/self-love">
                                 <img
                                   class="img-fluid"
                                   src={require("../static/img/post/preview.png")}
@@ -206,31 +205,31 @@ export default class BlogDetails extends Component {
                               </a>
                             </div>
                             <div class="arrow">
-                              <a href="#">
+                              <a href="/blog/self-love">
                                 <span class="lnr text-white ti-arrow-left"></span>
                               </a>
                             </div>
                             <div class="detials">
                               <p>Prev Post</p>
-                              <a href="#">
-                                <h4>Space The Final Frontier</h4>
+                              <a href="/blog/self-love">
+                                <h4>Self Love: The Key to a Happy Life​</h4>
                               </a>
                             </div>
                           </div>
                           <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                             <div class="detials">
                               <p>Next Post</p>
-                              <a href="#">
-                                <h4>Telescopes 101</h4>
+                              <a href="/blog/soshi">
+                                <h4>Soshi's: Making life delicious</h4>
                               </a>
                             </div>
                             <div class="arrow">
-                              <a href="#">
+                              <a href="/blog/soshi">
                                 <span class="lnr text-white ti-arrow-right"></span>
                               </a>
                             </div>
                             <div class="thumb">
-                              <a href="#">
+                              <a href="/blog/soshi">
                                 <img
                                   class="img-fluid"
                                   src={require("../static/img/post/next.png")}
@@ -245,14 +244,14 @@ export default class BlogDetails extends Component {
                     <div class="blog-author">
                       <div class="media align-items-center">
                         <img
-                          src={require("../static/img/blog/author.png")}
-                          alt=""
+                          src={require(`../static/img/${this.state.blog.author.image}`)}
+                          alt={this.state.blog.author.name}
                         />
                         <div class="media-body">
-                          <a href="#">
-                            <h4>{this.state.blog.author}</h4>
+                          <a href={this.state.blog.author.profile}>
+                            <h4>{this.state.blog.author.name}</h4>
                           </a>
-                          <p>{this.state.blog.bio}</p>
+                          <p>{this.state.blog.author.bio}</p>
                         </div>
                       </div>
                     </div>
@@ -278,12 +277,9 @@ export default class BlogDetails extends Component {
                                     <p class="date">{comment.date}</p>
                                   </div>
                                   <div class="reply-btn">
-                                    <a
-                                      href="#"
-                                      class="btn-reply text-uppercase"
-                                    >
+                                    <button class="btn-reply text-uppercase">
                                       reply
-                                    </a>
+                                    </button>
                                   </div>
                                 </div>
                               </div>

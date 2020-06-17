@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import SubFooter from "../components/sub-footer.component";
 import Breadcrumb from "../components/breadcrumb.component";
 import Sidebar from "../components/sidebar.component";
