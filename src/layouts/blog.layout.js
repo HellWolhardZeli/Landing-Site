@@ -9,9 +9,13 @@ export default class Blog extends Component {
   state = { blog: undefined };
 
   componentDidMount() {
-    var firestore = firebase.firestore();
-    firestore
-      .collection("blog")
+    const params = new URLSearchParams(this.props.location.search);
+    const category = params.get("category");
+    const tag = params.get("tag");
+    var blog = firebase.firestore().collection("blog");
+    if (category) blog = blog.where("category", "==", category);
+    if (tag) blog = blog.where("tags", "array-contains", tag);
+    blog
       .get()
       .then((querySnapshot) => {
         const data = querySnapshot.docs.map((doc) => doc.data());
@@ -58,14 +62,17 @@ export default class Blog extends Component {
                 <div class="blog_left_sidebar">
                   {this.state.blog &&
                     this.state.blog.map((article, i) => (
-                      <article class="blog_item">
+                      <article class="blog_item" key={i}>
                         <div class="blog_item_img">
                           <img
                             class="card-img rounded-0"
-                            src={require("../static/img/blog/single_blog_1.png")}
+                            src={require(`../static/img/${article.featuredImage}`)}
                             alt=""
                           />
-                          <a href="#" class="blog_item_date">
+                          <a
+                            href={`/blog?category=${article.category}`}
+                            class="blog_item_date"
+                          >
                             <h3>{article.category}</h3>
                             <p></p>
                           </a>
@@ -81,13 +88,13 @@ export default class Blog extends Component {
                           <p>{article.excerpt}</p>
                           <ul class="blog-info-link">
                             <li>
-                              <a href="#">
-                                <i class="fa fa-calendar"></i> {article.date}
-                              </a>
+                              {/* <a href="#"> */}
+                              <i class="fa fa-calendar"></i> {article.date}
+                              {/* </a> */}
                             </li>
                             <li>
                               {article.tags.map((tag, i) => (
-                                <a href="#" key={i}>
+                                <a href={`/blog?tag=${tag}`} key={i}>
                                   <i class="fa fa-tag"></i>
                                   {tag + " "}
                                 </a>
