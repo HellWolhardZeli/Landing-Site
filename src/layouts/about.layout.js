@@ -43,7 +43,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/about/vision.png")}
-                    alt=""
+                    alt="We are on a quest to provide positive content and make it a new norm, and strongly entail your life, beautifully yet subtly."
                     class="img-fluid"
                   />
                 </div>
@@ -86,7 +86,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/about/mission.png")}
-                    alt=""
+                    alt="We aim to give you joy. We wish you would choose optimism and hope by embarking on a journey with us.  "
                     class="img-fluid"
                   />
                 </div>
@@ -98,7 +98,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/about/tagline.png")}
-                    alt=""
+                    alt="This phrase is to brighten the day, it symbolises fireflies of hope and positivity when we’re consumed by negativity."
                     class="img-fluid"
                   />
                 </div>
@@ -129,7 +129,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/logo/logo.png")}
-                    alt=""
+                    alt="Our logo is the chemical structure of Dopamine, the happiness chemical.The zest behind it is to boost positivity and cheer."
                     class="img-fluid"
                   />
                 </div>
@@ -160,7 +160,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/harshita.png")}
-                        alt=""
+                        alt="Harshita Nagpal is the co-founder of Dopamine, leading the editing and creative team"
                       />
                     </span>
                   </div>
@@ -176,8 +176,7 @@ export default class About extends Component {
                     <p>
                       The boss lady dons multiple hats- writer, editor,
                       designer. She’s a professional multi-tasker and the best
-                      and the coolest boss anyone can have. She is the head
-                      magician who makes sure that the magic of dopamine comes
+                      and the coolest boss anyone can have. She makes sure that the magic of dopamine comes
                       alive with each and everything.
                     </p>
                   </div>
@@ -190,7 +189,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/mashu.png")}
-                        alt=""
+                        alt="Mashu Ajmera, is the co-founder of Dopamine,takes care of all the technical aspects of the magazine and the website. "
                       />
                     </span>
                   </div>
@@ -218,7 +217,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/srinidhi.png")}
-                        alt=""
+                        alt="Srinidhi Srinivasan, is the content creator of Dopamine team. From captions, to articles to editing"
                       />
                     </span>
                   </div>
@@ -246,7 +245,9 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/samyak.png")}
-                        alt=""
+                        alt="
+                        Samyak Samantray, is the design engine of Dopamine team,who brings his A game to our curations by beautigying our work. 
+                        "
                       />
                     </span>
                   </div>
@@ -261,7 +262,7 @@ export default class About extends Component {
                       This creative head brings his A-game to our curations. The
                       amazing designs enhancing each and every content of
                       magazine, the posters making our social media look nicer,
-                      all the designs everywhere, is all his talent and
+                      all the designs are his talent and
                       expertise.
                     </p>
                   </div>
@@ -274,7 +275,8 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/devika.png")}
-                        alt=""
+                        alt="Devika Gujrani, is the Public relations person at Dopamine. She handles all the collaborations, contests, events etc. 
+                        "
                       />
                     </span>
                   </div>
