@@ -43,7 +43,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/about/vision.png")}
-                    alt="We are on a quest to provide positive content and make it a new norm, and strongly entail your life, beautifully yet subtly."
+                    alt="Our Vision"
                     class="img-fluid"
                   />
                 </div>
@@ -86,7 +86,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/about/mission.png")}
-                    alt="We aim to give you joy. We wish you would choose optimism and hope by embarking on a journey with us.  "
+                    alt="Our mission"
                     class="img-fluid"
                   />
                 </div>
@@ -98,7 +98,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/about/tagline.png")}
-                    alt="This phrase is to brighten the day, it symbolises fireflies of hope and positivity when we’re consumed by negativity."
+                    alt="Let Positivity Engulf You"
                     class="img-fluid"
                   />
                 </div>
@@ -129,7 +129,7 @@ export default class About extends Component {
                 <div class="col-md-4">
                   <img
                     src={require("../static/img/logo/logo.png")}
-                    alt="Our logo is the chemical structure of Dopamine, the happiness chemical.The zest behind it is to boost positivity and cheer."
+                    alt="Our logo is the chemical structure of Dopamine, the happiness chemical."
                     class="img-fluid"
                   />
                 </div>
@@ -160,7 +160,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/harshita.png")}
-                        alt="Harshita Nagpal is the co-founder of Dopamine, leading the editing and creative team"
+                        alt="Picture of Harshita Nagpal,co-founder of Dopamine"
                       />
                     </span>
                   </div>
@@ -189,7 +189,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/mashu.png")}
-                        alt="Mashu Ajmera, is the co-founder of Dopamine,takes care of all the technical aspects of the magazine and the website. "
+                        alt="Picture of Mashu Ajmera, co-founder of Dopamine. "
                       />
                     </span>
                   </div>
@@ -217,7 +217,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/srinidhi.png")}
-                        alt="Srinidhi Srinivasan, is the content creator of Dopamine team. From captions, to articles to editing"
+                        alt="Picture of Srinidhi Srinivasan"
                       />
                     </span>
                   </div>
@@ -245,9 +245,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/samyak.png")}
-                        alt="
-                        Samyak Samantray, is the design engine of Dopamine team,who brings his A game to our curations by beautigying our work. 
-                        "
+                        alt="Picture of Samyak Samantray "
                       />
                     </span>
                   </div>
@@ -275,8 +273,7 @@ export default class About extends Component {
                       <img
                         class="img-fluid"
                         src={require("../static/img/team/devika.png")}
-                        alt="Devika Gujrani, is the Public relations person at Dopamine. She handles all the collaborations, contests, events etc. 
-                        "
+                        alt="Picture of Devika Gujrani"
                       />
                     </span>
                   </div>
