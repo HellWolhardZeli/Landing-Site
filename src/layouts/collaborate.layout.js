@@ -41,7 +41,13 @@ export default class Collaborate extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="services-caption text-center mb-30">
                   <div class="service-icon">
-                    <span class="flaticon-businessman"></span>
+                    <span>
+                      <img
+                        class="img-fluid"
+                        src={require("../static/img/new/reach.png")}
+                        alt=""
+                      />
+                    </span>
                   </div>
                   <div class="service-cap">
                     <h4>
@@ -54,7 +60,13 @@ export default class Collaborate extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="services-caption active text-center mb-30">
                   <div class="service-icon">
-                    <span class="flaticon-pay"></span>
+                    <span>
+                      <img
+                        class="img-fluid"
+                        src={require("../static/img/new/web.png")}
+                        alt=""
+                      />
+                    </span>
                   </div>
                   <div class="service-cap">
                     <h4>
@@ -70,7 +82,13 @@ export default class Collaborate extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="services-caption text-center mb-30">
                   <div class="service-icon">
-                    <span class="flaticon-plane"></span>
+                    <span>
+                      <img
+                        class="img-fluid"
+                        src={require("../static/img/new/social.png")}
+                        alt=""
+                      />
+                    </span>
                   </div>
                   <div class="service-cap">
                     <h4>
@@ -106,7 +124,7 @@ export default class Collaborate extends Component {
                     <div class="single-customer mb-100">
                       <div class="what-img">
                         <img
-                          src={require("../static/img/shape/man2.png")}
+                          src={require("../static/img/testmonial/Ajay-Singh-Peelwa.png")}
                           alt=""
                         />
                       </div>
@@ -133,7 +151,7 @@ export default class Collaborate extends Component {
                     <div class="single-customer mb-100">
                       <div class="what-img">
                         <img
-                          src={require("../static/img/shape/man1.png")}
+                          src={require("../static/img/testmonial/Payal-Lulla.png")}
                           alt=""
                         />
                       </div>

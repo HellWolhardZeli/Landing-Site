@@ -199,7 +199,13 @@ export default class Home extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="services-caption text-center mb-30">
                   <div class="service-icon">
-                    <span class="flaticon-businessman"></span>
+                    <span>
+                      <img
+                        class="img-fluid"
+                        src={require("../static/img/new/happierlife.png")}
+                        alt=""
+                      />
+                    </span>
                   </div>
                   <div class="service-cap">
                     <h4>
@@ -214,7 +220,13 @@ export default class Home extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="services-caption active text-center mb-30">
                   <div class="service-icon">
-                    <span class="flaticon-pay"></span>
+                    <span>
+                      <img
+                        class="img-fluid"
+                        src={require("../static/img/new/poscontent.png")}
+                        alt=""
+                      />
+                    </span>
                   </div>
                   <div class="service-cap">
                     <h4>
@@ -230,7 +242,13 @@ export default class Home extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="services-caption text-center mb-30">
                   <div class="service-icon">
-                    <span class="flaticon-plane"></span>
+                    <span>
+                      <img
+                        class="img-fluid"
+                        src={require("../static/img/new/gratitude.png")}
+                        alt=""
+                      />
+                    </span>
                   </div>
                   <div class="service-cap">
                     <h4>
